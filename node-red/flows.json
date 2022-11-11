@@ -1,0 +1,875 @@
+[
+    {
+        "id": "ddc454a207c7641a",
+        "type": "tab",
+        "label": "estacionamento",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2ef486fa76e382c0",
+        "type": "mqtt in",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "topic": "minhapassarelamqtt_001/vaga_A",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d8d6d359736ecea8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 1060,
+        "wires": [
+            [
+                "d4e2bb4bf5267bbc",
+                "e4c240327103791a"
+            ]
+        ]
+    },
+    {
+        "id": "d4e2bb4bf5267bbc",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "hivemq_vagaA",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "9f3c422e44c0a989",
+        "type": "mqtt out",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "topic": "minhapassarelamqtt_001/vaga_A",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d8d6d359736ecea8",
+        "x": 420,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "43348a0d0b61adfc",
+        "type": "inject",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":0,\"B\":0}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "ba4ef4f8e2585e41",
+                "66e26160fe8339d3"
+            ]
+        ]
+    },
+    {
+        "id": "297ccdb0156e3f4f",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "saída A",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ba4ef4f8e2585e41",
+        "type": "change",
+        "z": "ddc454a207c7641a",
+        "name": "A",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.A",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "297ccdb0156e3f4f",
+                "d3ba162a35bc422a",
+                "9f3c422e44c0a989",
+                "724b31ede9ac5605"
+            ]
+        ]
+    },
+    {
+        "id": "30c6fc9c72643475",
+        "type": "inject",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":1,\"B\":0}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 500,
+        "wires": [
+            [
+                "ba4ef4f8e2585e41",
+                "66e26160fe8339d3"
+            ]
+        ]
+    },
+    {
+        "id": "64716799f3a40d9d",
+        "type": "inject",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":1,\"B\":1}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "ba4ef4f8e2585e41",
+                "66e26160fe8339d3"
+            ]
+        ]
+    },
+    {
+        "id": "55bf5b6fcf16ef64",
+        "type": "inject",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"A\":0,\"B\":1}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 620,
+        "wires": [
+            [
+                "ba4ef4f8e2585e41",
+                "66e26160fe8339d3"
+            ]
+        ]
+    },
+    {
+        "id": "66e26160fe8339d3",
+        "type": "change",
+        "z": "ddc454a207c7641a",
+        "name": "B",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.B",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "c4c66569ce2f74e4",
+                "178edad1b225325f",
+                "270071dd838be8b8",
+                "724b31ede9ac5605"
+            ]
+        ]
+    },
+    {
+        "id": "178edad1b225325f",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "saída B",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "d3ba162a35bc422a",
+        "type": "switch",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "69ba8fab50d39e78"
+            ],
+            [
+                "1646c810d72fe102"
+            ]
+        ]
+    },
+    {
+        "id": "69ba8fab50d39e78",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1646c810d72fe102",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c4c66569ce2f74e4",
+        "type": "switch",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 670,
+        "y": 680,
+        "wires": [
+            [
+                "09fd8eb78b7b63c0"
+            ],
+            [
+                "9a3755652a8197ff"
+            ]
+        ]
+    },
+    {
+        "id": "09fd8eb78b7b63c0",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9a3755652a8197ff",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "270071dd838be8b8",
+        "type": "mqtt out",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "topic": "minhapassarelamqtt_001/vaga_B",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d8d6d359736ecea8",
+        "x": 400,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "1971846cc81c5e64",
+        "type": "mqtt in",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "topic": "minhapassarelamqtt_001/vaga_B",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d8d6d359736ecea8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 1180,
+        "wires": [
+            [
+                "683b1ac0c86eb71e",
+                "e265adba72cebd94"
+            ]
+        ]
+    },
+    {
+        "id": "683b1ac0c86eb71e",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "hivemq_vaga_B",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "b68887665ec23cfd",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "vaga_A_status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "e4c240327103791a",
+        "type": "function",
+        "z": "ddc454a207c7641a",
+        "name": "statusVaga",
+        "func": "switch (msg.payload) {\n    case 0:\n    msg.payload = \"LIVRE\"\n        // code block\n        break;\n    case 1:\n    msg.payload = \"OCUPADA\"\n        // code block\n        break;\n    default:\n    // code block\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1020,
+        "wires": [
+            [
+                "b68887665ec23cfd",
+                "94e3ec56d6c03bee"
+            ]
+        ]
+    },
+    {
+        "id": "e265adba72cebd94",
+        "type": "function",
+        "z": "ddc454a207c7641a",
+        "name": "statusVaga",
+        "func": "switch (msg.payload) {\n    case 0:\n    msg.payload = \"LIVRE\"\n        // code block\n        break;\n    case 1:\n    msg.payload = \"OCUPADA\"\n        // code block\n        break;\n    default:\n    // code block\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1300,
+        "wires": [
+            [
+                "d4d6cd4268d7a182",
+                "f2f528710c8d6f7e"
+            ]
+        ]
+    },
+    {
+        "id": "d4d6cd4268d7a182",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "vaga_B_status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "d27a446c8a1bb66c",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "retorno",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "724b31ede9ac5605",
+        "type": "join",
+        "z": "ddc454a207c7641a",
+        "name": "array",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 690,
+        "y": 580,
+        "wires": [
+            [
+                "60262683df54f304"
+            ]
+        ]
+    },
+    {
+        "id": "60262683df54f304",
+        "type": "function",
+        "z": "ddc454a207c7641a",
+        "name": "sum",
+        "func": "var A = msg.payload[0];\nvar B = msg.payload[1];\nmsg.payload = A+B;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 600,
+        "wires": [
+            [
+                "d27a446c8a1bb66c",
+                "6c8b6dd4ea3e0574"
+            ]
+        ]
+    },
+    {
+        "id": "6c8b6dd4ea3e0574",
+        "type": "mqtt out",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "topic": "minhapassarelamqtt_001/estacionamento",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d8d6d359736ecea8",
+        "x": 1160,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "2c1f46392b995724",
+        "type": "mqtt in",
+        "z": "ddc454a207c7641a",
+        "name": "",
+        "topic": "minhapassarelamqtt_001/estacionamento",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d8d6d359736ecea8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 1380,
+        "wires": [
+            [
+                "451923c859ccda7c",
+                "34b1e369ad55d9c4",
+                "c4fea002881acfd7"
+            ]
+        ]
+    },
+    {
+        "id": "451923c859ccda7c",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "hivemq_estacionamento",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "34b1e369ad55d9c4",
+        "type": "function",
+        "z": "ddc454a207c7641a",
+        "name": "function 1",
+        "func": "switch (msg.payload) {\n    case 0:\n        msg.payload = \"VAZIO\"\n        // code block\n        break;\n    case 1:\n        msg.payload = \"Ainda há vaga disponível.\"\n        // code block\n        break;\n\n    case 2:\n        msg.payload = \"LOTADO\"\n        // code block\n        break;\n    default:\n    // code block\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1520,
+        "wires": [
+            [
+                "3027e9bba9b594f7",
+                "836e5d98f14a060e"
+            ]
+        ]
+    },
+    {
+        "id": "3027e9bba9b594f7",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "estacionamento_status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "c4fea002881acfd7",
+        "type": "ui_gauge",
+        "z": "ddc454a207c7641a",
+        "name": "estacionamento",
+        "group": "a99227584f7f63da",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Lotação",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 800,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "d7cad3a9a1f19f0f",
+        "type": "debug",
+        "z": "ddc454a207c7641a",
+        "name": "saída gráfico",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "836e5d98f14a060e",
+        "type": "ui_text",
+        "z": "ddc454a207c7641a",
+        "group": "a99227584f7f63da",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 910,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "94e3ec56d6c03bee",
+        "type": "ui_text",
+        "z": "ddc454a207c7641a",
+        "group": "687868c8b812d2ff",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "vaga_A",
+        "label": "Vaga A",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1060,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "f2f528710c8d6f7e",
+        "type": "ui_text",
+        "z": "ddc454a207c7641a",
+        "group": "687868c8b812d2ff",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "vaga_B",
+        "label": "Vaga B",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1060,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "da3584d09b3ec181",
+        "type": "ui_spacer",
+        "z": "ddc454a207c7641a",
+        "name": "spacer",
+        "group": "a99227584f7f63da",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2051f4e35e361343",
+        "type": "ui_spacer",
+        "z": "ddc454a207c7641a",
+        "name": "spacer",
+        "group": "687868c8b812d2ff",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d8d6d359736ecea8",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a99227584f7f63da",
+        "type": "ui_group",
+        "name": "Disponibilidade de vagas",
+        "tab": "cad7cf764271f9c6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "687868c8b812d2ff",
+        "type": "ui_group",
+        "name": "Sobre as vagas",
+        "tab": "cad7cf764271f9c6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cad7cf764271f9c6",
+        "type": "ui_tab",
+        "name": "GS-IoT-Estacionamento-takakaDev",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
