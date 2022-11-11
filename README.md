@@ -1,6 +1,6 @@
 # AI ENGINEERING, COGNITIVE AND SEMANTIC COMPUTATION & IOT
 
-## PS - 2 Semestre
+## GS - 2 Semestre - Mobility
 
 **Grupo Takaka**
 
@@ -60,14 +60,6 @@ sensores é: <br>
 Fluxo2 - Dashboard que recebe (subscriber) os dados via protocolo MQTT e
 exibe o status em um Dashboard.
 
-### Arquitetura
-![alt text](./assets/Diagrama/0.jpg "Começo do código")
-![alt text](./assets/Diagrama/1.jpg "Meio do código")
-![alt text](./assets/Diagrama/2.jpg "Fim do código")
-### Imagem utilizada
-
-![alt text](./assets/Curriculo_exemplo.jpg "Currículo de exemplo")
-
 ## Como usar 
 
 Como clonar o repositório:
@@ -78,7 +70,9 @@ Como clonar o repositório:
     cd GSArnaldo
     ls
 ~~~
+
 ## Vídeo demonstrativo
+
 ### FIAP - GS - IoT - takakaDev - Parte 1 - Projeto para o Arduino - tinkercad
 [![youtube.com](./assets/IoT-devices-1.jpg)](https://youtu.be/V70yRazF_lg)
 ### FIAP - GS - IoT - takakaDev - Parte 2 - Projeto no red-node
@@ -86,12 +80,9 @@ Como clonar o repositório:
 
 ## Referências 
 
-* [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/)
-* [OpenCV - Contour Features](https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html)
-* [gTTS](https://gtts.readthedocs.io/en/latest/module.html#languages-gtts-lang)
-* [PlaySound](https://pypi.org/project/playsound/)
-* [Tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
+* [Tinkercad](https://www.tinkercad.com/)
+* [Arduino](https://arduino.cc)
+* [Node-Red](https://nodered.org/)
 
 
 ---
