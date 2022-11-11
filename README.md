@@ -51,13 +51,14 @@ Como clonar o repositório:
 
 ~~~wsl2   
     cd /home/iot
-    git clone https://github.com/CECH-Carlos/iotAM
-    cd iotAM
+    git clone https://github.com/CECH-Carlos/GSArnaldo
+    cd GSArnaldo
     ls
 ~~~
 ## Vídeo demonstrativo
-
+### FIAP - GS - IoT - takakaDev - Parte 1 - Projeto para o Arduino - tinkercad
 [![youtube.com](./assets/IoT-devices-1.jpg)](https://youtu.be/V70yRazF_lg)
+### FIAP - GS - IoT - takakaDev - Parte 2 - Projeto no red-node
 [![youtube.com](./assets/IoT-devices-1.jpg)](https://youtu.be/oEOFAzFlPnA)
 
 ## Referências 
