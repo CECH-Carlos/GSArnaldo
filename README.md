@@ -70,22 +70,6 @@ exibe o status em um Dashboard.
 
 ## Como usar 
 
-Execute o app:
-
-* Instale o Python versão 3
-* Execute o seguinte comando no terminal para instalar a biblioteca do _PySimpleGUI_ 
-
-|           Shell          |        Linux / Mac        |
-|           :---:          |            :---:          |
-| `pip install pysimplegui`|`pip3 install pysimplegui` |
-
-* Execute o mesmo comando para `opencv-python`, `playsound`, `gtts` e `pytesseract` 
-* Acesse o local do arquivo pelo terminal
-* Abra o _app.py_ 
-* Execute o comando `python app.py` no terminal
-* Siga as instruções do aplicativo
-* Pronto > Você acaba de executar o aplicativo de leitura e identifacação de currículos 😄
-
 Como clonar o repositório:
 
 ~~~wsl2   
