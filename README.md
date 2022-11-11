@@ -66,7 +66,7 @@ Como clonar o repositório:
 
 ~~~wsl2   
     cd /home/iot
-    git clone https://github.com/CECH-Carlos/GSArnaldo
+    git clone https://github.com/CECH-Carlos/GSArnaldo.git
     cd GSArnaldo
     ls
 ~~~
