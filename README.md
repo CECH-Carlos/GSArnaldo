@@ -18,7 +18,7 @@
 **Ano: 4 SI**
 
 ## Objetivo / descrição do Projeto
-1.) Um dos grandes problemas do trânsito é encontrar uma vaga
+**1.)** Um dos grandes problemas do trânsito é encontrar uma vaga
 para estacionar. Buscando auxiliar os clientes de um estacionamento, a
 empresa precisa desenvolver uma aplicação que faça a detecção de quantas
 vagas estão disponíveis. <br>
@@ -40,7 +40,8 @@ verde apagar, caso contrário, o LED verde deverá ficar ligado e o vermelho
 desligado. <br>
 O display LCD deverá mostrar a quantidade de vagas LIVRES e a
 quantidade de vagas OCUPADAS do estacionamento. <br>
-2.) Inspirado em uma arquitetura simples IoT, faça o
+
+**2.)** Inspirado em uma arquitetura simples IoT, faça o
 desenvolvimento de um gateway utilizando o Node-Red. <br>
 Como o sistema vai funcionar: <br>
 Um flow recebe as informações dos sensores e envia para o segundo
